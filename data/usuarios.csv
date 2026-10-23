@@ -1,0 +1,51 @@
+user_id,nome,idade,faixa_etaria,nacionalidade,gosto_principal
+U001,Laura Navarro,38,35-44,Espanha,Reggae
+U002,Mateus Ribeiro,33,25-34,Brasil,Reggae
+U003,Vitória Barbosa,18,18-24,Brasil,Hip Hop
+U004,Carmen Navarro,29,25-34,Espanha,Hip Hop
+U005,Larissa Ribeiro,41,35-44,Brasil,Blues
+U006,Daniel Souza,49,45-60,Brasil,Jazz
+U007,Rodrigo Almeida,20,18-24,Brasil,R&B
+U008,Tyler Miller,36,35-44,Estados Unidos,Country
+U009,Larissa Souza,38,35-44,Brasil,Blues
+U010,Renata Hernández,30,25-34,México,Eletrônica
+U011,Marina Lima,18,18-24,Brasil,Hip Hop
+U012,Rui Fernandes,36,35-44,Portugal,R&B
+U013,Charlotte Thomas,36,35-44,Reino Unido,Folk
+U014,Mateus Lima,26,25-34,Brasil,Pop
+U015,Sota Tanaka,31,25-34,Japão,Hip Hop
+U016,Sofia Ribeiro,31,25-34,Brasil,Eletrônica
+U017,Haruto Suzuki,33,25-34,Japão,R&B
+U018,Beatriz Barbosa,30,25-34,Brasil,Reggae
+U019,Thiago Santos,34,25-34,Brasil,Pop
+U020,Gabriela Santos,28,25-34,Brasil,Hip Hop
+U021,Bruno Barbosa,32,25-34,Brasil,Pop
+U022,Lucas Pereira,35,35-44,Brasil,Blues
+U023,Facundo López,18,18-24,Argentina,Hip Hop
+U024,Emiliano Hernández,19,18-24,México,Indie
+U025,Felipe Ribeiro,22,18-24,Brasil,Indie
+U026,Regina Torres,42,35-44,México,Rock
+U027,Inês Moreira,51,45-60,Portugal,Jazz
+U028,Daniel Pereira,38,35-44,Brasil,Rock
+U029,Tiago Pinto,18,18-24,Portugal,Indie
+U030,Charlotte Clarke,34,25-34,Reino Unido,Metal
+U031,Eduarda Ribeiro,32,25-34,Brasil,Pop
+U032,James Miller,30,25-34,Estados Unidos,R&B
+U033,Bruno Silva,28,25-34,Brasil,Pop
+U034,Mateo González,54,45-60,Argentina,Reggae
+U035,Oliver Clarke,29,25-34,Reino Unido,Indie
+U036,Michael Brown,43,35-44,Estados Unidos,Country
+U037,Catarina Pinto,39,35-44,Portugal,Blues
+U038,Lucía Díaz,34,25-34,Argentina,Reggae
+U039,Harry Taylor,32,25-34,Reino Unido,Rock
+U040,Henrique Almeida,18,18-24,Brasil,Pop
+U041,Daniel Costa,37,35-44,Brasil,R&B
+U042,Lucía López,34,25-34,Argentina,Eletrônica
+U043,Paula Gómez,20,18-24,Espanha,Eletrônica
+U044,Henrique Carvalho,38,35-44,Brasil,Pop
+U045,Sebastián García,19,18-24,México,Indie
+U046,Daniela Ospina,39,35-44,Colômbia,Pop
+U047,Emily Wilson,27,25-34,Estados Unidos,Hip Hop
+U048,Juan Cardona,32,25-34,Colômbia,Hip Hop
+U049,Karina Lima,43,35-44,Brasil,R&B
+U050,Megan Johnson,29,25-34,Estados Unidos,Rock

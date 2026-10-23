@@ -1,0 +1,120 @@
+1. Nós por tipo
+
+```cypher
+MATCH (n)
+UNWIND labels(n) AS tipo
+RETURN tipo, count(*) AS quantidade
+ORDER BY quantidade DESC;
+```
+
+2. Relacionamentos por tipo
+
+```cypher
+MATCH ()-[r]->()
+RETURN type(r) AS relacionamento, count(*) AS quantidade
+ORDER BY quantidade DESC;
+```
+
+3. Visualização do grafo
+
+```cypher
+MATCH (u:User)-[r:LISTENED]->(s:Song)
+OPTIONAL MATCH (a:Artist)-[:PERFORMS]->(s)
+OPTIONAL MATCH (s)-[:IN_GENRE]->(g:Genre)
+RETURN u, r, s, a, g
+LIMIT 15;
+```
+
+4. Catálogo musical
+
+```cypher
+MATCH (a:Artist)-[:PERFORMS]->(s:Song)
+RETURN
+    s.song_id AS id,
+    s.title AS musica,
+    a.name AS artista,
+    s.year AS ano
+ORDER BY musicapwd
+LIMIT 15;
+```
+
+5. Gêneros musicais
+
+```cypher
+MATCH (s:Song)-[:IN_GENRE]->(g:Genre)
+RETURN
+    s.title AS musica,
+    g.name AS genero
+ORDER BY musica
+LIMIT 15;
+```
+
+6. Histórico de reprodução
+
+```cypher
+MATCH (u:User)-[r:LISTENED]->(s:Song)
+RETURN
+    u.nome AS usuario,
+    s.title AS musica,
+    r.vezes AS reproducoes
+ORDER BY usuario, reproducoes DESC
+LIMIT 15;
+```
+
+7. Músicas ouvidas por usuário
+
+```cypher
+MATCH (u:User)
+OPTIONAL MATCH (u)-[:LISTENED]->(s:Song)
+RETURN
+    u.nome AS usuario,
+    count(DISTINCT s) AS musicas_ouvidas
+ORDER BY musicas_ouvidas DESC;
+```
+
+8. Total de reproduções por usuário
+
+```cypher
+MATCH (u:User)
+OPTIONAL MATCH (u)-[r:LISTENED]->()
+RETURN
+    u.nome AS usuario,
+    coalesce(sum(r.vezes), 0) AS total_reproducoes
+ORDER BY total_reproducoes DESC;
+```
+
+9. Músicas com gêneros em comum
+
+```cypher
+MATCH (s1:Song)-[:IN_GENRE]->(g:Genre)<-[:IN_GENRE]-(s2:Song)
+WHERE s1.song_id < s2.song_id
+RETURN
+    s1.title AS musica_1,
+    s2.title AS musica_2,
+    g.name AS genero
+LIMIT 15;
+```
+
+10. Similaridade entre músicas
+
+```cypher
+MATCH (s1:Song)-[r:SIMILAR_TO]-(s2:Song)
+WHERE s1.song_id < s2.song_id
+RETURN
+    s1.title AS musica_1,
+    s2.title AS musica_2,
+    r.score AS similaridade
+ORDER BY similaridade DESC
+LIMIT 15;
+```
+
+11. Recomendações por usuário
+
+```cypher
+MATCH (u:User)-[r:RECOMMENDED]->(s:Song)
+RETURN
+    u.nome AS usuario,
+    s.title AS musica_recomendada,
+    r.score AS pontuacao,
+    r.similaridade_tags AS similaridade_tags
+ORDER BY usuario, pontuacao
